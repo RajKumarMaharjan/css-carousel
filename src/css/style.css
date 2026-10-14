@@ -85,7 +85,31 @@ li {
     height: 10px;
     border: 0;
     border-radius: 50%;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: #475569;
     border-radius: 8px;
     transition: 0.3s ease;
+}
+
+.product-card::scroll-marker:target-current {
+    background-color: #3b82f6;
+    transform: scale(1.5);
+    box-shadow: 0 0 14px 0 rgba(59, 130, 246, 0.5);
+}
+
+@media (max-width: 1024px) {
+    .product-card {
+        flex: 0 0 calc(33.33% - 0.75rem);
+    }
+}
+
+@media (max-width: 768px) {
+    .product-card {
+        flex: 0 0 calc(50% - 0.75rem);
+    }
+}
+
+@media (max-width: 480px) {
+    .product-card {
+        flex: 0 0 calc(100% - 0.75rem);
+    }
 }
